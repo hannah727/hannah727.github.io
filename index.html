@@ -16,26 +16,50 @@
     body, h1, .card-title {
       font-family: 'Cactus Classical Serif', serif;
     }
+
+    body {
+      padding-top: 70px;
+      background-color: #fafafa;
+    }
+
+    .navbar-brand, .nav-link, .dropdown-menu a {
+      font-size: 1.25rem;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
     .card {
       margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      border: 1px solid #e3e3e3;
+      overflow: hidden;
+      transition: transform 0.2s ease-in-out;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card-img-top {
+      height: 240px;
+      object-fit: cover;
+    }
+
     .card-body a {
       text-decoration: none;
-      color: #007bff;
+      color: #d63384;
     }
+
     .card-body a:hover {
       text-decoration: underline;
     }
-    .fixed-img {
-      height: 200px;
-      object-fit: cover;
-    }
-    body {
-      padding-top: 70px;
+
+    form.d-flex input {
+      border-radius: 20px;
     }
   </style>
 </head>
-
 <body class="container">
   <!-- 導覽列 -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -74,14 +98,13 @@
   </nav>
 
   <!-- 主標題 -->
-  <h1>This is Hannah's Homepage!</h1>
+  <h1 class="text-center my-4">This is Hannah's Homepage!</h1>
 
   <!-- 卡片區 -->
   <div class="row">
-    <!-- 每一張卡片都正確對應到 img 資料夾 -->
     <div class="col-md-4 mb-4">
       <div class="card h-100">
-        <img src="img/0225.jpg" class="card-img-top fixed-img" alt="0225">
+        <img src="img/0225.jpg" class="card-img-top" alt="0225">
         <div class="card-body">
           <h5 class="card-title">0225 It's my website</h5>
           <p><a href="https://sites.google.com/stu.ntue.edu.tw/hannah7270225/home" target="_blank">CLICK</a></p>
@@ -91,7 +114,7 @@
 
     <div class="col-md-4 mb-4">
       <div class="card h-100">
-        <img src="img/0304.jpg" class="card-img-top fixed-img" alt="0304">
+        <img src="img/0304.jpg" class="card-img-top" alt="0304">
         <div class="card-body">
           <h5 class="card-title">0304 It's spam</h5>
           <p><a href="https://hannah727.github.io/0304/index.html" target="_blank">CLICK</a></p>
@@ -101,7 +124,7 @@
 
     <div class="col-md-4 mb-4">
       <div class="card h-100">
-        <img src="img/0311.jpg" class="card-img-top fixed-img" alt="0311">
+        <img src="img/0311.jpg" class="card-img-top" alt="0311">
         <div class="card-body">
           <h5 class="card-title">0311 唐詩賞析</h5>
           <p><a href="https://hannah727.github.io/0311/0311/index.html" target="_blank">CLICK</a></p>
@@ -111,7 +134,7 @@
 
     <div class="col-md-4 mb-4">
       <div class="card h-100">
-        <img src="img/0318.jpg" class="card-img-top fixed-img" alt="0318">
+        <img src="img/0318.jpg" class="card-img-top" alt="0318">
         <div class="card-body">
           <h5 class="card-title">0318 My theme song</h5>
           <p><a href="https://hannah727.github.io/0318/index.html" target="_blank">CLICK</a></p>
@@ -121,7 +144,7 @@
 
     <div class="col-md-4 mb-4">
       <div class="card h-100">
-        <img src="img/0325.jpg" class="card-img-top fixed-img" alt="0325">
+        <img src="img/0325.jpg" class="card-img-top" alt="0325">
         <div class="card-body">
           <h5 class="card-title">0325 唐詩三百首</h5>
           <p><a href="https://hannah727.github.io/0325b/index.html" target="_blank">CLICK</a></p>
@@ -131,7 +154,7 @@
 
     <div class="col-md-4 mb-4">
       <div class="card h-100">
-        <img src="img/0408.jpg" class="card-img-top fixed-img" alt="0408">
+        <img src="img/0408.jpg" class="card-img-top" alt="0408">
         <div class="card-body">
           <h5 class="card-title">0408 翻頁式圖片</h5>
           <p><a href="https://hannah727.github.io/0408/index.html" target="_blank">CLICK</a></p>
@@ -144,6 +167,11 @@
   <footer class="text-center bg-light text-muted mt-4">
     <div class="p-4">© 2025 Copyright: <a class="text-reset fw-bold" href="#">HANNAH</a></div>
   </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
