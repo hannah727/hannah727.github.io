@@ -75,14 +75,22 @@
           <li class="nav-item"><a class="nav-link active" href="#">Homepage</a></li>
           <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Hannah's work</a>
-            <ul class="dropdown-menu">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+               data-bs-toggle="dropdown" aria-expanded="false">
+              Hannah's work
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="https://sites.google.com/stu.ntue.edu.tw/hannah7270225/home" target="_blank">0225</a></li>
               <li><a class="dropdown-item" href="https://www.ntue.edu.tw/" target="_blank">0304</a></li>
               <li><a class="dropdown-item" href="https://hannah727.github.io/0311/0311/index.html" target="_blank">0311</a></li>
               <li><a class="dropdown-item" href="https://hannah727.github.io/0318/index.html" target="_blank">0318</a></li>
               <li><a class="dropdown-item" href="https://hannah727.github.io/0325b/index.html" target="_blank">0325</a></li>
               <li><a class="dropdown-item" href="https://hannah727.github.io/0408/index.html" target="_blank">0408</a></li>
+              <li><a class="dropdown-item" href="https://hannah727.github.io/0415/index.html" target="_blank">0415</a></li>
+              <li><a class="dropdown-item" href="https://hannah727.github.io/0422/index.html" target="_blank">0422</a></li>
+              <li><a class="dropdown-item" href="https://hannah727.github.io/0429/index.html" target="_blank">0429</a></li>
+              <li><a class="dropdown-item" href="https://hannah727.github.io/0506/index.html" target="_blank">0513</a></li>
+              <li><a class="dropdown-item" href="https://hannah727.github.io/0520/index.html" target="_blank">0520</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">more info...</a></li>
             </ul>
@@ -99,19 +107,30 @@
 
   <!-- 主標題 -->
   <h1 class="text-center my-4">This is Hannah's Homepage!</h1>
-<!-- 輪播圖片 -->
-    <div id="carouselExample" class="carousel slide my-4">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="img/1 copy.jpg" class="d-block w-100" alt="Image 1">
-        </div>
-        <div class="carousel-item">
-          <img src="img/2 copy.jpg" class="d-block w-100" alt="Image 2">
-        </div>
-        <div class="carousel-item">
-          <img src="img/3 copy.jpg" class="d-block w-100" alt="Image 3">
-        </div>
+
+  <!-- 輪播圖片 -->
+  <div id="carouselExample" class="carousel slide my-4" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/1 copy.jpg" class="d-block w-100" alt="Image 1">
       </div>
+      <div class="carousel-item">
+        <img src="img/2 copy.jpg" class="d-block w-100" alt="Image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="img/3 copy.jpg" class="d-block w-100" alt="Image 3">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
@@ -148,7 +167,7 @@
         <img src="img/0311.jpg" class="card-img-top" alt="0311">
         <div class="card-body">
           <h5 class="card-title">0311 唐詩賞析</h5>
-          <p><a href="0311/index.html" target="_blank">CLICK</a></p>
+          <p><a href="0311/0311/index.html" target="_blank">CLICK</a></p>
         </div>
       </div>
     </div>
@@ -246,11 +265,52 @@
   </div>
 
   <!-- 頁尾 -->
+  <!-- 頁尾 -->
   <footer class="text-center bg-light text-muted mt-4">
     <div class="p-4">© 2025 Copyright: <a class="text-reset fw-bold" href="#">HANNAH</a></div>
   </footer>
 
-  <!-- Bootstrap JS -->
+ 
+
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+ <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
